@@ -1,0 +1,224 @@
+{% load static %}
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>PCOS Prediction</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<style>
+			.arrow {
+			box-sizing: border-box;
+			height: 5vw;
+			width: 5vw;
+			border-style: solid;
+			border-color: white;
+			border-width: 0px 1px 1px 0px;
+			transform: rotate(45deg);
+			transition: border-width 150ms ease-in-out;
+		  }
+		  
+		.arrow:hover {
+		border-bottom-width: 4px;
+		border-right-width: 4px;
+		}
+		</style>
+		<link rel="stylesheet" href=" {% static 'css/main.css' %} " />
+		<noscript><link rel="stylesheet" href=" {% static 'css/noscript.css' %} " /></noscript>
+	</head>
+	
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+		
+			<div id="wrapper" class="fade-in">
+
+				<!-- Intro -->
+					<div id="intro">
+						<h1>This is<br />
+						Massively</h1>
+						<p>Give your application description here</p>
+						<ul class="actions">
+							<li><a href="#header" ><img src=" {% static 'images/arrow_down.jpg' %} " alt="" width="150" height="150"/></a></li>
+						</ul>
+					</div>
+
+				<!-- Header -->
+					<header id="header">
+						<a href=" {% static 'index.html' %} " class="logo">Let's Go</a>
+					</header>
+
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Featured Post -->
+							<article class="post featured">
+								<header class="major"><br><br>
+									<h3 >Give info for hat your applcaiton</h3>
+									<h2><a href="#">And this is a<br />
+									massive headline</a></h2>
+									<p>Aenean ornare velit lacus varius enim ullamcorper proin aliquam<br />
+									facilisis ante sed etiam magna interdum congue. Lorem ipsum dolor<br />
+									amet nullam sed etiam veroeros.</p>
+								</header> 
+								<a href="#" class="image main"><img src=" {% static 'images/pic01.jpg' %} " alt="" /></a>
+								<ul class="actions special">
+									<li><a href="#" class="button large">Full Story</a></li>
+								</ul>
+							</article>
+
+					
+
+				<!-- Footer -->
+					<!-- <footer id="footer">
+						<section>
+							<form action="{% url 'process_form' %}" method="post">
+								{% csrf_token %}
+								<div class="fields">
+									<div class="field">
+										<label for="name">Length Of your period</label>
+										<input type="text" name="name" id="input1" />
+									</div>
+									<div class="field">
+										<label for="email">Are You Overweight</label>
+										<input type="text" name="name" id="input2" />
+									</div>
+									<div class="field">
+										<label for="message">Did you lost your weight or Gained weight Recently</label>
+										<textarea name="message" id="input3" rows="1"></textarea>
+									</div>
+									<div class="field">
+										<label for="message">Irregular periods?</label>
+										<textarea name="message" id="input4" rows="1"></textarea>
+									</div>
+									<div class="field">
+										<label for="message">Acne or Skin problems?</label>
+										<textarea name="message" id="input5" rows="1"></textarea>
+									</div>
+									<div class="field">
+										<label for="message">Hair loss</label>
+										<textarea name="message" id="input6" rows="1"></textarea>
+									</div>
+									<div class="field">
+										<label for="message">Dark patches</label>
+										<textarea name="message" id="input7" rows="1"></textarea>
+									</div>
+									<div class="field">
+										<label for="message">More mood sWing</label>
+										<textarea name="message" id="input8" rows="1"></textarea>
+									</div>
+									<div class="field">
+										<label for="message">Exericise per Week?</label>
+										<textarea name="message" id="input9" rows="1"></textarea>
+									</div>
+									<div class="field">
+										<label for="message">Eat outside per Week</label>
+										<textarea name="message" id="input10" rows="1"></textarea>
+									</div>
+									<div class="field">
+										<label for="message">Will you eat Canned food Often</label>
+										<textarea name="message" id="input11" rows="1"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Predict" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section></section>
+								<h2>The PCOS prodiction</h2>
+								Display the prediction results -->
+								<!-- {% if prediction %}
+								<h2>Prediction: {{ prediction }}</h2>
+								{% endif %} -->
+	
+						<!-- </section> -->
+					<!-- </footer> --> 
+					<footer id="footer">
+						<section>
+							<form action="{% url 'process_form' %}" method="post">
+								{% csrf_token %}
+								<div class="fields">
+									<div class="field">
+										<label for="input1">Length of your period</label>
+										<input type="text" name="input1" id="input1" />
+									</div>
+									<div class="field">
+										<label for="input2">Are you overweight?</label>
+										<input type="text" name="input2" id="input2" />
+									</div>
+									<div class="field">
+										<label for="input3">Did you lose or gain weight recently?</label>
+										<textarea name="input3" id="input3" rows="1"></textarea>
+									</div>
+									<div class="field">
+										<label for="input4">Irregular periods?</label>
+										<textarea name="input4" id="input4" rows="1"></textarea>
+									</div>
+									<div class="field">
+										<label for="input5">Acne or skin problems?</label>
+										<textarea name="input5" id="input5" rows="1"></textarea>
+									</div>
+									<div class="field">
+										<label for="input6">Hair loss</label>
+										<textarea name="input6" id="input6" rows="1"></textarea>
+									</div>
+									<div class="field">
+										<label for="input7">Dark patches</label>
+										<textarea name="input7" id="input7" rows="1"></textarea>
+									</div>
+									<div class="field">
+										<label for="input8">More mood swings?</label>
+										<textarea name="input8" id="input8" rows="1"></textarea>
+									</div>
+									<div class="field">
+										<label for="input9">Exercise per week?</label>
+										<textarea name="input9" id="input9" rows="1"></textarea>
+									</div>
+									<div class="field">
+										<label for="input10">Eat outside per week</label>
+										<textarea name="input10" id="input10" rows="1"></textarea>
+									</div>
+									<div class="field">
+										<label for="input11">Will you eat canned food often?</label>
+										<textarea name="input11" id="input11" rows="1"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Predict" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<!-- <section> -->
+								<br><br>
+								<h1><t></t> Predictions:</h1>
+								<!-- Display the prediction results -->
+								<br><br>
+								{% if prediction %}
+							<section>
+									<h2>The PCOS prediction: {{ prediction }}</h2>
+							</section>
+								{% endif %}
+							<!-- </section> -->
+						</section>
+					</footer>
+					
+
+				</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src=" {% static 'js/jquery.min.js' %} "></script>
+			<script src=" {% static 'js/jquery.scrollex.min.js' %} "></script>
+			<script src=" {% static 'js/jquery.scrolly.min.js' %} "></script>
+			<script src=" {% static 'js/browser.min.js' %} "></script>
+			<script src=" {% static 'js/breakpoints.min.js' %} "></script>
+			<script src=" {% static 'js/util.js' %} "></script>
+			<script src=" {% static 'js/main.js' %} "></script>
+
+	</body>
+</html>
